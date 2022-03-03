@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import InvoiceList from "./Pages/InvoiceList/InvoiceList";
 import InvoiceForm from "./Pages/InvoiceForm/InvoiceForm";
 import Appbar from "./components/Appbar";
 import Toast from "./components/Toast";
