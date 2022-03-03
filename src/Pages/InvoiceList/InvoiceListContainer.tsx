@@ -59,7 +59,7 @@ export default function InvoiceListContainer() {
   }, []);
 
   const handleSuccessData = (data) => {
-    setInvoiceList(data.data);
+    setInvoiceList(data.data.data);
   };
   const handleError = (err) => {
     dispatch({
@@ -98,6 +98,7 @@ export default function InvoiceListContainer() {
               <TableCell>Participant Name</TableCell>
               <TableCell>Invoice Number</TableCell>
               <TableCell>Date</TableCell>
+              <TableCell>Item Count</TableCell>
               <TableCell>Total</TableCell>
               <TableCell>View</TableCell>
             </TableRow>
@@ -123,6 +124,7 @@ export default function InvoiceListContainer() {
                     <TableCell>
                       {moment(item.inv_date).format("Do MMM YYYY")}
                     </TableCell>
+                    <TableCell>{item.length}</TableCell>
                     <TableCell>{item.total_amount}</TableCell>
                     <TableCell>
                       <Button

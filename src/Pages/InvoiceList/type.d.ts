@@ -7,4 +7,5 @@ export interface InvoiceTableState {
   budget_allocation: string;
   total_amount: number;
   inv_doc: string;
+  length: number;
 }
