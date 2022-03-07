@@ -139,6 +139,13 @@ export default function InvoiceListContainer() {
                     </TableCell>
                   </TableRow>
                 ))}
+            {invoiceList.length === 0 && (
+              <TableRow>
+                <TableCell colSpan={8} align="center">
+                  No Data Available
+                </TableCell>
+              </TableRow>
+            )}
           </TableBody>
         </Table>
       </TableContainer>

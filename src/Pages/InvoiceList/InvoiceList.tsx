@@ -223,19 +223,21 @@ const InvoiceList = () => {
                     page * rowsPerPage + rowsPerPage
                   )
                 : rows
-              ).map((row) => (
-                <TableRow key={row.name}>
-                  <TableCell component="th" scope="row">
-                    {row.name}
-                  </TableCell>
-                  <TableCell style={{ width: 160 }} align="right">
-                    {row.calories}
-                  </TableCell>
-                  <TableCell style={{ width: 160 }} align="right">
-                    {row.fat}
-                  </TableCell>
-                </TableRow>
-              ))}
+              )
+                .map((row) => (
+                  <TableRow key={row.name}>
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                    <TableCell style={{ width: 160 }} align="right">
+                      {row.calories}
+                    </TableCell>
+                    <TableCell style={{ width: 160 }} align="right">
+                      {row.fat}
+                    </TableCell>
+                  </TableRow>
+                ))
+                .reverse()}
               {emptyRows > 0 && (
                 <TableRow style={{ height: 53 * emptyRows }}>
                   <TableCell colSpan={6} />
